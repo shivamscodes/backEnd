@@ -29,7 +29,9 @@ app.use(bodyParser.urlencoded({extended:true}));
 
 //configuration to fetch file content : file upload middleware
 app.use(fileUpload());
-
+app.get("/",(req,res)=>{
+    res.send("backend is live");
+})
 
 app.use("/api/ai", aiChatRoute);
 
